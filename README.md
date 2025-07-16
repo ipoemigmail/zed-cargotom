@@ -2,16 +2,30 @@
 ## language server
 https://github.com/frederik-uni/cargotom
 ## Config
+Sample config:
 ```js
 "lsp": {
-    "cargotom": {
-      "initialization_options": {
-        "offline": false,
-        "stable": false,
-        "per_page_web": 50
-      }
-},
+  "cargo-tom": {
+    "initialization_options": {
+      /// Search
+      "per_page": 25,
+      /// What features should be displayed on hover
+      /// All, UnusedOpt, Features,
+      "feature_display_mode": "UnusedOpt",
+      "hide_docs_info_message": false,
+      /// Sort toml on format
+      "sort_format": false,
+      /// Use stable versions in completions
+      "stable_version": true,
+      /// Offline mode uses https://github.com/frederik-uni/crates.io-dump-minfied for search
+      /// The order is non existent feel free to contribute
+      "offline": false,
+    }
+  },
+  // ...
+}
 ```
+See language server repo for up-to-date configuration options.
 
 ## Features
 ### Code actions
