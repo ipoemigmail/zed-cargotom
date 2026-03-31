@@ -22,7 +22,7 @@ impl CargoTomlExtension {
             &zed::LanguageServerInstallationStatus::CheckingForUpdate,
         );
         let release = zed::latest_github_release(
-            "frederik-uni/cargotom",
+            "ipoemigmail/cargotom",
             zed::GithubReleaseOptions {
                 require_assets: true,
                 pre_release: false,
